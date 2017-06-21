@@ -4,8 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>News</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
@@ -491,7 +489,27 @@
 		</div>
 	</div>
 
-	<div class="tercera-parte">
+	<section class="mapa hidden-sm hidden-xs">
+		<div class="container">
+			<div class="row">
+				<h4>FIND US</h4>
+				<div class="col-lg-4 col-md-4">
+					<label for="">Source</label>
+					<input type="text" id="source"><br>
+					<label for="">Destination</label>
+					<input type="text" id="destination"><br>
+					<button id="show">Show</button>
+				</div>
+				<div class="col-lg-8 col-md-8 hidden-sm hidden-xs">
+					<div id="myMap">
+						<!-- aca se carga el mapa -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ultima-parte">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -508,7 +526,10 @@
 				</div>
 			</div>
 		</div>
-		
-	</div>
+	</section>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJY6BfshlqgPdz-PqPw3FZxYAjqEbWsq4&callback=initMap&libraries=places"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 </html>
